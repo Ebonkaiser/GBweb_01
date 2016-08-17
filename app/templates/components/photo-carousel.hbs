@@ -1,0 +1,21 @@
+<div id="my-carousel" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+        {{#each photos as |photo|}}
+            <li data-target="#my-carousel" data-slide-to=""></li>
+        {{/each}}
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+        {{#each photos as |photo|}}
+            <div class="item">
+                <img {{bind-attr src="photo.completeUrl" title="photo.caption" alt="photo.caption"}} />
+                <div class="carousel-caption">
+                    {{photo.caption}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+    <!-- removed right and left controls for clarity -->
+</div>
